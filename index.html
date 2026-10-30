@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dVote | Decentralised Voting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🗳️ dVote</h1>
+        <button id="connectWallet">Connect Wallet</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Your voice. Your vote.</h2>
+            <p>Transparent community decisions, powered by blockchain.</p>
+            <p id="walletAddress">Wallet not connected</p>
+        </section>
+
+        <section class="create-section">
+            <h2>Create a Proposal</h2>
+
+            <form id="proposalForm">
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Proposal title"
+                    required
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="Describe your proposal"
+                    required
+                ></textarea>
+
+                <input
+                    type="number"
+                    id="duration"
+                    placeholder="Voting duration (minutes)"
+                    min="1"
+                    required
+                >
+
+                <button type="submit">Create Proposal</button>
+            </form>
+        </section>
+
+        <section class="proposals-section">
+            <h2>All Proposals</h2>
+            <div id="proposalsList">
+                <p>Loading proposals...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
